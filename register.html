@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="./css/register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="order.html">ORDER</a></li>
+                <li class="nav-item"><a href="register.html">REGISTER</a></li>
+                <li class="nav-item"><a href="#">BLOGS</a></li>
+                <li class="nav-item"><a href="features.html">FEATURES</a></li>
+            </ul>
+        </nav>
+        <div class="icon-container">
+            <div class="iconsearch-ctr">
+                <div class="search-box">
+                    <label for="search-input">
+                        <input type="text" id="search-input" placeholder=" Search here..">
+                        <span>Start searching</span>
+                    </label>
+                    <div class="icon">
+                        <img src="./images/search-icon.png" alt="search-icon-small">
+                    </div>
+                </div>
+                <img class="search" src="./images/search-icon.png" alt="search-icon-main">
+            </div>
+            <a href="#"><img src="./images/user-icon.png" alt="user"></a>
+            <a href="#"><img src="./images/heart-icon.png" alt="favorite"></a>
+            <div class="icon-cart">
+                <img src="./images/bag-icon.png" alt="bag">
+            </a>
+        </div>
+    </header>
+	<section class="register">
+        <div class="register-container">
+            <form id="form" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+                <div class="heading-text">Register</div>
+                <fieldset>
+                    <legend>Client Account</legend>
+                    <div class="text-input">
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" />
+                    </div>
+                    <div class="text-input">
+                        <label for="pass1">Password</label>
+                        <input id="pass1" type="password" name="pass1" />
+                    </div>
+                    <div class="text-input">
+                        <label for="pass2">Retype Password</label>
+                        <input id="pass2" type="password" name="pass2" />
+                    </div>
+                    <div class="text-input">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="text-input">
+                        <label for="postcode">Postcode</label>
+                        <input id="postcode" type="number" name="postcode" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Client Information</legend>
+                    <div class="text-input">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" />
+                    </div>
+                    <div class="radio-input gender">
+                        <label>Gender</label>
+                        <div class="gender-radio">
+                            <div class="male">
+                                <input id="male" type="radio" name="gender" value="M" />
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="female">
+                                <input id="female" type="radio" name="gender" value="F" />
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="radio-input">
+                        <label>Favorite ice creams</label>
+                        <div class="ice-cream">
+                            <label for="ic1">Mango Ice Cream</label>
+                            <input type="checkbox" id="ic1" value="Mango Ice Cream" name="ic1" />
+                            <label for="ic2">Strawberry Ice Cream</label>
+                            <input type="checkbox" id="ic2" value="Strawberry Ice Cream" name="ic2" />
+                            <label for="ic3">Chocolate Milk Ice Cream</label>
+                            <input type="checkbox" id="ic3" value="Chocolate Milk Ice Cream" name="ic3" />  
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="button-input">
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+            <img class="img-right" src="./images/blog-img-1.png" alt="">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="logo-col">
+            <img src="./images/logo.png" alt="logo-footer">
+            <p>Serving up sweet moments always</p>
+            <div class="icon-row">
+                <span class="fa-brands fa-x-twitter"></span>
+                <span class="fa-brands fa-facebook-f"></span>
+                <span class="fa-brands fa-instagram"></span>
+                <span class="fa-brands fa-youtube"></span>
+            </div>
+        </div>
+        <div class="footer-col">
+            <p>Help & Information</p>
+            <ul>
+                <li>Pagination</li>
+                <li>Terms & Condition</li>
+                <li>Contact</li>
+                <li>Term of Us</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>About Us</p>
+            <ul>
+                <li>Help Center</li>
+                <li>Address Store</li>
+                <li>Privacy Policy</li>
+                <li>Stores</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p>Categories</p>
+            <ul>
+                <li>Delivery</li>
+                <li>Legal Notice</li>
+                <li>Secure payment</li>
+                <li>Stores</li>
+            </ul>
+        </div>
+    </footer>
+    <section class="ref">
+        <a href="https://iceam-store-demo.myshopify.com/">Website Theme Preference</a>
+        <a href="https://www.w3schools.com/">W3schools</a>
+        <a href="https://fontawesome.com/icons">Font Awesome</a>
+        <a href="https://icons8.com/icons/set/icon">Icon 8</a>
+        <a href="https://www.youtube.com/watch?v=2SbhlPiC5SY">Cart and Checkout</a>
+    </section>
+</body>
+<script src="./js/register.js"></script>
+</html>

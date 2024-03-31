@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+
+    <link rel="stylesheet" href="./css/order.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="order.html">ORDER</a></li>
+                <li class="nav-item"><a href="register.html">REGISTER</a></li>
+                <li class="nav-item"><a href="#">BLOGS</a></li>
+                <li class="nav-item"><a href="features.html">FEATURES</a></li>
+            </ul>
+        </nav>
+        <div class="icon-container">
+            <div class="iconsearch-ctr">
+                <div class="search-box">
+                    <label for="search-input">
+                        <input type="text" id="search-input" placeholder=" Search here..">
+                        <span>Start searching</span>
+                    </label>
+                    <div class="icon">
+                        <img src="./images/search-icon.png" alt="search-icon-small">
+                    </div>
+                </div>
+                <img class="search" src="./images/search-icon.png" alt="search-icon-main">
+            </div>
+            <a href="#"><img src="./images/user-icon.png" alt="user"></a>
+            <a href="#"><img src="./images/heart-icon.png" alt="favorite"></a>
+            <div class="icon-cart">
+                <img src="./images/bag-icon.png" alt="bag">
+            </a>
+        </div>
+    </header>
+    <div class="cart">
+        <div class="cart-head-text">
+            <p>Check Out</p>
+        </div>
+        <div class="list-cart">
+
+            <div class="cart-item">
+                <img src="./images/1.png" alt="cart-img">
+                <div class="item-content">
+                    <div class="cart-item-name">Banana Ice Cream</div>
+                    <div class="cart-item-quantity">
+                        QTY:
+                        <span class="value">1</span>
+                    </div>
+                    <div class="cart-item-price">$15.00</div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <button>+</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="total-price-container">
+            <div class="sub-total">
+                <p>Subtotal</p>
+                <div class="subtotal-price" id="sub-total">
+                    $40.00
+                </div>
+            </div>
+            <div class="shipping">
+                <p>Shipping</p>
+                <div class="shipping-address">
+                    <label for="shipping-address-box" class="hidden">Shipping Address</label>
+                    <input type="text" id="shipping-address-box" >
+                </div>
+            </div>
+            <div class="total">
+                <p>Total</p>
+                <div class="total-price">
+                    $40.00
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="form" target="_blank" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php">
+		<fieldset>
+			<legend>Fill in the necessary information</legend>
+            <div class="contact-input">
+				<label for="email" class="heading-text"><span class="fa-solid fa-address-book"></span>Contact</label>
+				<input id="email" type="email" name="contact" placeholder="Email or phone number" />
+			</div>
+			<div class="radio-input delivery">
+                <p class="heading-text"><span class="fa-solid fa-truck"></span>Delivery</p>
+				<div class="order-container">
+                    <p class="take-order">How will you take your order?</p>
+                    <div class="delivery-radio">
+                        <div class="radio-container">
+                            <input type="radio" onclick="radioCheck1();" name="take-order" id="delivery" value="delivery" />
+                            <label for="delivery" class="radio-box">
+                                Delivery
+                            </label>
+                            <input type="radio" onclick="radioCheck1();" name="take-order" id="pickup" value="pickup" />
+                            <label for="pickup" class="radio-box">
+                              Pick-up
+                            </label>
+                        </div>
+                        <div id="radio-active-1">
+                            <div class="text-input">
+                                <label for="deliveryAdd">Delivery address</label>
+                                <input id="deliveryAdd" type="text" name="delivery-address" />
+                            </div>
+                            <div class="billing-address">
+                                <label for="same-checkbox" class="hidden">Same as delivery address</label>
+                                <input id="same-checkbox" type="checkbox" name="same-as-delivery" value="yes"
+                                    onclick="copy(event)" />
+                                <p>Billing address same as delivery address</p>
+                            </div>
+                            <div class="text-input">
+                                <label for="billingAdd">Billing address</label>
+                                <input id="billingAdd" type="text" name="billing-address" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="radio-input payment">
+				<p class="heading-text"><span class="fa-solid fa-credit-card"></span>Payment method</p>
+				<div class="pay-radio">
+                    <p class="take-order">How will you pay?</p>
+                    <div class="radio-container">
+                        <input type="radio" onclick="radioCheck2();" name="pay" id="payPickup" value="on_pick-up"/>
+                        <label for="payPickup" class="radio-box">
+                            On pick-up
+                        </label>
+                        <input type="radio" onclick="radioCheck2();" name="pay" id="payOnline" value="online"/>
+                        <label for="payOnline" class="radio-box">
+                            Online
+                        </label>
+                    </div>
+                    <div id="radio-active-2">
+                        <div class="radio-card">
+                            <label>Choose one of the following types:</label>
+                            <input type="radio" id="visa" name="card_type" value="Visa" />
+                            <label for="visa">Visa</label>
+                            <input type="radio" id="master" name="card_type" value="Mastercard" />
+                            <label for="master">Mastercard</label>
+                            <input type="radio" id="american" name="card_type" value="American_Express" />
+                            <label for="american">American Express</label>
+                        </div>
+                        <div class="creditcard-box">
+                            <label for="creditNumber">Enter credit card number</label>
+                            <input id="creditNumber" type="number" name="credit-number" />
+                        </div>
+                    </div>
+                </div>
+			</div>
+            .
+		</fieldset>
+		<div class="button-input">
+			<input type="reset" value="Reset" />
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+    <section class="best-seller">
+        <h1 class="section-title">BEST SELLER</h1>
+        <p class="title-small">Best Seller Product This Week!</p>
+        <div class="seller-content">
+            <div class="content-item">
+                <img src="./images/1.png" alt="peach-flavored">
+                <p class="item-name">Peach Flavored Ice Cream</p>
+                <div class="item-price">$30.00</div>
+                <div class="item-icons">
+                    <div class="icon-slide" onclick="">
+                        <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.41442 6H3.75V4.5H6.58558L7.33558 7.5H18.935L17.2321 15.1627L16.5 15.75H8.25L7.51786 15.1627L6.02 8.42233L5.41442 6ZM7.68496 9L8.85163 14.25H15.8984L17.065 9H7.68496ZM10.5 18C10.5 18.8284 9.82843 19.5 9 19.5C8.17157 19.5 7.5 18.8284 7.5 18C7.5 17.1716 8.17157 16.5 9 16.5C9.82843 16.5 10.5 17.1716 10.5 18ZM15 19.5C15.8284 19.5 16.5 18.8284 16.5 18C16.5 17.1716 15.8284 16.5 15 16.5C14.1716 16.5 13.5 17.1716 13.5 18C13.5 18.8284 14.1716 19.5 15 19.5Z" fill="#080341"/>
+                        </svg>
+                    </div>
+                    <div class="icon-slide">
+                        <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.993 5.09691C11.0387 4.25883 9.78328 3.75 8.40796 3.75C5.42122 3.75 3 6.1497 3 9.10988C3 10.473 3.50639 11.7242 4.35199 12.67L12 20.25L19.4216 12.8944L19.641 12.6631C20.4866 11.7172 21 10.473 21 9.10988C21 6.1497 18.5788 3.75 15.592 3.75C14.2167 3.75 12.9613 4.25883 12.007 5.09692L12 5.08998L11.993 5.09691ZM12 7.09938L12.0549 7.14755L12.9079 6.30208L12.9968 6.22399C13.6868 5.61806 14.5932 5.25 15.592 5.25C17.763 5.25 19.5 6.99073 19.5 9.10988C19.5 10.0813 19.1385 10.9674 18.5363 11.6481L18.3492 11.8453L12 18.1381L5.44274 11.6391C4.85393 10.9658 4.5 10.0809 4.5 9.10988C4.5 6.99073 6.23699 5.25 8.40796 5.25C9.40675 5.25 10.3132 5.61806 11.0032 6.22398L11.0921 6.30203L11.9452 7.14752L12 7.09938Z" fill="#080341"/>
+                        </svg>
+                    </div>
+                    <div class="icon-slide">
+                        <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 10.5C15 12.9853 12.9853 15 10.5 15C8.01472 15 6 12.9853 6 10.5C6 8.01472 8.01472 6 10.5 6C12.9853 6 15 8.01472 15 10.5ZM14.1793 15.2399C13.1632 16.0297 11.8865 16.5 10.5 16.5C7.18629 16.5 4.5 13.8137 4.5 10.5C4.5 7.18629 7.18629 4.5 10.5 4.5C13.8137 4.5 16.5 7.18629 16.5 10.5C16.5 11.8865 16.0297 13.1632 15.2399 14.1792L20.0304 18.9697L18.9697 20.0303L14.1793 15.2399Z" fill="#080341"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+<script src="./js/order.js"></script>
+</body>
+</html>

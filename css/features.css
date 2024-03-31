@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+ul li{
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
+.header {
+    width: 100vw;
+    height: 14vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 3vw;
+    position: fixed;
+    z-index: 800;
+    transition: all 0.5s ease;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px 1px lightgrey;
+    transition: all 0.5s ease;
+}
+.logo{
+    height: 100%;
+    width: 15%;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nav-bar ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.nav-bar ul li{
+    font-weight: 500;
+    position: relative;
+    transition: 0.4s ease;
+    line-height: 1.6em;
+    margin: 0 1.2vw;
+}
+.nav-bar ul li:nth-child(5){
+    color: rgb(185, 75, 105);
+}
+.nav-bar ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(185, 75, 105);
+    width: 0;
+    height: 1px;
+    transition: 0.4s ease;
+}
+.nav-bar ul li:nth-child(5)::before{
+    width: 100%;
+}
+.nav-bar ul li:hover{
+    color: rgb(185, 75, 105);
+}
+.nav-bar ul li:hover::before{
+    width: 100%;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 13%;
+}
+.icon-container a img{
+    height: 100%;
+}
+.icon-container a {
+    height: 32%;
+}
+.iconsearch-ctr {
+    height: 32%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.iconsearch-ctr:hover .search-box{
+    transform: translateY(0vh);
+}
+.search-box{
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.45s ease-in-out;
+    transform: translateY(-100vh);
+    background-color: rgba(242, 116, 116, 0.3);
+}
+.search-box label{
+    width: 60%;
+    height: 20%;
+}
+label input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding-left: 2%;
+    font-size: 17px;
+}
+label span{
+    display: none;
+}
+.icon {
+    height: 20%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.icon img{
+    width: 45%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    cursor: pointer;
+}
+.icon-cart{
+    position: relative;
+    height: 32%;
+    cursor: pointer;
+}
+.icon-cart img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/* THANK YOU */
+.features{
+    width: 100%;
+    height: 86vh;
+    /* background-color: red; */
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    height: 45vh;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.logo-col{
+    width: 15%;
+    height: 100%;
+    padding: 4% 1% 0 1%;
+    display: flex;
+    flex-direction: column;
+}
+.logo-col img{
+    width: 100%;
+    object-fit: cover;
+}
+.logo-col p{
+    font-weight:400;
+    font-size: 0.95em;
+    margin: 15% 0;
+}
+.icon-row{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-row span{
+    font-size: 0.95em;
+}
+.footer-col{
+    width: 15%;
+    height: 100%;
+    padding: 4% 1% 0 1%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-col p{
+    font-weight: 600;
+    font-size: 1.1em;
+    position: relative;
+    padding-bottom: 0.8em;
+}
+.footer-col p::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 1px;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+}
+.footer-col ul{
+    margin-top: 10%;
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+.ref{
+    width: 100vw;
+    height: 6vh;
+    background-color: rgba(185, 75, 105, 0.6);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ref h2{
+    font-weight: 700;
+    font-size: 1em;
+}
+.ref a{
+    font-weight: 200;
+    text-decoration:underline;
+}
